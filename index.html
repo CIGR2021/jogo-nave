@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font Paytone -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet"> 
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Resgate</title>
+</head>
+<body>
+  <div class="container">
+    <div class="fundoGame">
+      <div
+        class="inicio"
+      >
+        <h1>Resgate</h1>
+        <p>
+          Utilize a tecla <strong>W</strong> ou <strong>seta para acima</strong> para movimentar o elicóptero para cima,
+          a tecla <strong>S</strong> ou <strong>seta para baixo</strong> para movimentar o elicóptero para baixo
+          e a tecla <strong>D</strong> ou <strong>barra de espaço</strong> para atirar!
+        </p>
+        <button
+          onclick="start()"
+        >
+          <h3>Clique aqui para iniciar o jogo e divirta-se!</h3>
+        </button>
+      </div> <!-- Inicio -->
+    </div> <!-- Fundo Game -->
+  </div> <!-- Container -->
+  
+  <!-- Sons do jogo -->
+  <audio src="/sons/disparo.wav" preload="auto" id="somDisparo"></audio>
+  <audio src="/sons/explosao.wav" preload="auto" id="somExplosao"></audio>
+  <audio src="/sons/musicaFundo.mp3" preload="auto" id="musica"></audio>
+  <audio src="/sons/gameOver.mp3" preload="auto" id="somGameOver"></audio>
+  <audio src="/sons/perdido.mp3" preload="auto" id="somPerdido"></audio>
+  <audio src="sons/resgate.mp3" preload="auto" id="somResgate"></audio>
+
+  <!-- scripts jquery e o main criado -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-collision.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
