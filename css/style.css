@@ -1,0 +1,284 @@
+:root {
+  --fundo: url('/img/fundo.jpg');
+  --fundo-game: url('/img/fundoGame.png');
+  --inimigo1: url('/img/inimigo1.png');
+  --inimigo2: url('/img/inimigo2.png');
+  --jogador: url('/img/jogador.png');
+  --amigo: url('/img/amigo.png');
+  --disparo: url('/img/disparo.png');
+  --explosao-amigo: url('/img/explosion1.png');
+  --color: #eee;
+  --color-titulo: #603A03;
+  --color-fundo-game: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--fundo);
+  background-size: cover;
+}
+
+.container {
+  width: 960px;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fundoGame {
+  width: auto;
+  height: 630px;
+  margin-top: 50px;
+  background-image: var(--fundo-game);
+  background-size: cover;
+  border-style: solid;
+  border-color: var(--color-fundo-game);
+}
+
+h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 40px;
+  color: var(--color-titulo);
+}
+
+h2 {
+  margin-left: 10px;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 20px;
+  color: var(--color-fundo-game);
+}
+
+h3 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 20px;
+  color: var(--color-titulo);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  height: 20vh;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
+  background-color: var(--color-fundo-game);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.fim {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 350px;
+  height: 200px;
+  background-color: var(--color-fundo-game);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.jogador {
+  width: 165px;
+  height: 66px;
+  position: absolute;
+  left: 45px;
+  top: 179px;
+  background-image: var(--jogador);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inimigo1 {
+  width: 167px;
+  height: 66px;
+  position: absolute;
+  left: 675px;
+  top: 253px;
+  background-image: var(--inimigo1);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inimigo2 {
+  width: 165px;
+  height: 70px;
+  position: absolute;
+  left: 775px;
+  top: 530px;
+  background-image: var(--inimigo2);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.amigo {
+  width: 56px;
+  height: 51px;
+  position: absolute;
+  left: 20px;
+  top: 550px;
+  background-image: var(--amigo);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.disparo {
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  background-image: var(--disparo);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.explosao1, .explosao2 {
+  width: 15px;
+  height: 87px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.explosao3 {
+  width: 44px;
+  height: 51px;
+  position: absolute;
+}
+
+.placar {
+  width: 450px;
+  height: 50px;
+  position: absolute;
+  left: 5px;
+  top: 590px;
+}
+
+.energia {
+  width: 160px;
+  height: 60px;
+  position: absolute;
+  left: 770px;
+  top: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*
+  Animação
+*/
+
+.anima1 {
+  background-image: var(--jogador);
+  animation: play 0.1s steps(2) infinite;
+  -webkit-animation: play 0.1s steps(2) infinite;
+  -moz-animation: play 0.1s steps(2) infinite;
+  -ms-zoom-animation: play 0.1s steps(2) infinite;
+  -o-animation: play 0.1s steps(2) infinite;
+}
+
+.anima2 {
+  background-image: var(--inimigo1);
+  animation: play 0.1s steps(2) infinite;
+  -webkit-animation: play 0.1s steps(2) infinite;
+  -moz-animation: play 0.1s steps(2) infinite;
+  -ms-zoom-animation: play 0.1s steps(2) infinite;
+  -o-animation: play 0.1s steps(2) infinite;
+}
+
+.anima3 {
+  background-image: var(--amigo);
+  animation: play2 1.9s steps(12) infinite;
+  -webkit-animation: play2 1.9s steps(12) infinite;
+  -moz-animation: play2 1.9s steps(12) infinite;
+  -ms-zoom-animation: play2 1.9s steps(12) infinite;
+  -o-animation: play2 1.9s steps(12) infinite;
+}
+
+.anima4 {
+  width: 44px;
+  height: 51px;
+  background-image: var(--explosao-amigo);
+  animation: play3 0.5s steps(6) infinite;
+  -webkit-animation: play3 0.5s steps(6) infinite;
+  -moz-animation: play3 0.5s steps(6) infinite;
+  -ms-zoom-animation: play3 0.5s steps(6) infinite;
+  -o-animation: play3 0.5s steps(6) infinite;
+}
+
+@keyframes play {
+  from {background-position: 0px;}
+  to {background-position: -337px;}
+}
+
+@-webkit-keyframes play {
+  from {background-position: 0px;}
+  to {background-position: -337px;}
+}
+
+@-moz-keyframes play {
+  from {background-position: 0px;}
+  to {background-position: -337px;}
+}
+
+@-o-keyframes play {
+  from {background-position: 0px;}
+  to {background-position: -337px;}
+}
+
+@keyframes play2 {
+  from {background-position: 0px;}
+  to {background-position: -735px;}
+}
+
+@-webkit-keyframes play2 {
+  from {background-position: 0px;}
+  to {background-position: -735px;}
+}
+
+@-moz-keyframes play2 {
+  from {background-position: 0px;}
+  to {background-position: -735px;}
+}
+
+@-o-keyframes play2 {
+  from {background-position: 0px;}
+  to {background-position: -735px;}
+}
+
+@keyframes play3 {
+  from {background-position: 0px;}
+  to {background-position: -308px;}
+}
+
+@-webkit-keyframes play3 {
+  from {background-position: 0px;}
+  to {background-position: -308px;}
+}
+
+@-moz-keyframes play3 {
+  from {background-position: 0px;}
+  to {background-position: -308px;}
+}
+
+@-o-keyframes play3 {
+  from {background-position: 0px;}
+  to {background-position: -308px;}
+}
